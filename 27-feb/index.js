@@ -38,20 +38,18 @@ const promise3 = new Promise((resolve, reject) => {
 
 
 
-// async function promiseExecutor() {
-//     data =
-//         await Promise.allSettled([promise1, promise2, promise3]); 
-// sum = data.reduce((acc, obj) => {  
-//     if (obj.status === 'fulfilled') {   
-//         return acc + obj.value;
-//     }
-//     return acc;
-
-
-// },0)
-// console.log(sum);
-// }
-// promiseExecutor();
+async function promiseExecutor() {
+    data =
+        await Promise.allSettled([promise1, promise2, promise3]); 
+sum = data.reduce((acc, obj) => {  
+    if (obj.status === 'fulfilled') {   
+        return acc + obj.value;
+    }
+    return acc;
+},0)
+console.log(sum);
+}
+promiseExecutor();
 
 
 // async function promiseExecutor() {
@@ -60,8 +58,8 @@ const promise3 = new Promise((resolve, reject) => {
 // }
 // promiseExecutor();
 
-async function promiseExecutor() {
-    data = await Promise.any([promise1, promise2, promise3]); 
-    console.log(data);
-}
-promiseExecutor();
+// async function promiseExecutor() {
+//     data = await Promise.any([promise1, promise2, promise3]); 
+//     console.log(data);
+// }
+// promiseExecutor();
