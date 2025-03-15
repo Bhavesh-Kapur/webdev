@@ -20,4 +20,4 @@ learn events in js like onclick etc onSubmit .....
 event Bubbling: bottom to up 
 
 event capturing: top to bottom 
-event delegation: this is the strategy to scale up the application `
+event delegation: this is the strategy to scale up the application 
