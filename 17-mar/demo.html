@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="parent">
+        <li class="Item">First child</li>
+        <li class="Item">Second child</li>
+        <li class="Item">Third child</li>
+    </ul>
+
+    <script>
+        console.log(document.getElementById('parent'))     //extracting parent
+        console.log(document.getElementById('parent').children)   //extracting children it gives an html collection 
+        a = document.getElementById('parent').children
+        console.log(Array.from(a))              //array from converts this collection to array 
+        console.log(Array.from(a))
+        b = Array.from(a);
+
+        b.forEach((e)=> e.style.color = 'red')
+        console.log(document.querySelectorAll('ul'))
+
+        // c = document.querySelectorAll('ul')
+
+
+        // c = Array.from(document.getElementById('parent').children)
+        // console.log(c[2])
+
+        // console.log(c.parentNode)
+
+        child = document.createElement('li')
+        child = child.innerHtml = '4th child'
+        parent = document.getElementById('parent')
+        parent.append(child)
+
+        
+    </script>
+</body>
+</html>
